@@ -1,6 +1,6 @@
 package likelionjpa.shopping.domain;
 
 public enum OrderStatus {
-    ORDER, CANCEL
+    ORDERED, PREPARE, DEPART, ARRIVE, COMPLETE, CANCELED
 }
 //각 값을 상수 취급

@@ -1,13 +1,15 @@
-package likelionjpa.shopping.domain;
+package likelionjpa.shopping.domain.item;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Embeddable //값 타입으로 사용하기 위해
+
+@Entity
+@DiscriminatorValue("B")
 @Getter
 @Setter
-public class Book {
+public class Book extends Item {
     private String author;
     private int isbn; //도서번호!
 

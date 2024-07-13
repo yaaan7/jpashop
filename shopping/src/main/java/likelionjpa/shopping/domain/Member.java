@@ -21,7 +21,7 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq_generator")
     //Id 값을 entity가 생성될 때마다 자동생성되게 해주는 어노테이션
     @SequenceGenerator(name = "member_seq", sequenceName = "member_SEQ", allocationSize = 1)
-    @Column(name = "member_id") //매핑할 데이터베이스 컬럼의 이름 지정
+    @Column(name = "MEMBER_ID") //매핑할 데이터베이스 컬럼의 이름 지정
     private Long id;
     private String username;
 
@@ -31,5 +31,7 @@ public class Member {
     //Member와 Order는 일대다 관계
     @OneToMany(mappedBy = "member") //자식 엔티티필드의 이름 지정
     private List<Order> orders = new ArrayList<>();
+    //위에 있는 애는 변수 선언과 동시에 초기화
+    //private List<Orders> orders;
 
 }

@@ -1,12 +1,13 @@
-package likelionjpa.shopping.domain;
+package likelionjpa.shopping.domain.item;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-@Embeddable //Item에 값 타입으로 사용하기 위해
+@Entity
+@DiscriminatorValue("M")
 @Getter
 @Setter
-public class Movie {
+public class Movie extends Item{
     private String director;
     private String actor;
 }

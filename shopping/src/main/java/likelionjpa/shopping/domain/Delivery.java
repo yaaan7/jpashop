@@ -21,9 +21,10 @@ public class Delivery {
     //private Order order;
 
     //Delivery는 Order과 일대일관계
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
     private Order order;
 
+    @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
 }
